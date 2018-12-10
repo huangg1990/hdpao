@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "223705382447",
+    "firebase_url": "https://hdpao-a5bea.firebaseio.com",
+    "project_id": "hdpao-a5bea",
+    "storage_bucket": "hdpao-a5bea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:223705382447:android:a757902669bd86f4",
+        "android_client_info": {
+          "package_name": "com.hdpao.hdpao"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "223705382447-5priaj8supjgdikt19dggii73l73c9gt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC31jDfhdNTlmIaI13RKv5NZXtchB0ahNY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

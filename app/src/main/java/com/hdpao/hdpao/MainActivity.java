@@ -2,6 +2,7 @@ package com.hdpao.hdpao;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
@@ -72,8 +73,28 @@ public class MainActivity extends AppCompatActivity {
         fcmTopicInit();
 
         findWiews();
+        restorePrefs(); //恢复数据
         setListener();
 
+    }
+    public static final String PREE="BMI_PREE";
+    public static final String PREF_HEIGHT="BMI_Height";
+    private void restorePrefs(){
+        SharedPreferences settings=getSharedPreferences(PREE,0);
+        String pref_height=settings.getString(PREF_HEIGHT,"");
+        if("".equals(pref_height)){
+            fieldheight.setText(pref_height);
+            fieldweight.requestFocus();
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        SharedPreferences settings=getSharedPreferences(PREE,0);
+        settings.edit()
+                .putString(PREF_HEIGHT,fieldheight.getText().toString())
+                .commit();
     }
 
     private void fcmTopicInit() {
